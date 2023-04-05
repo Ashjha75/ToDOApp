@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  user-select: none;
+}
+:root {
+  --bg-color: #ff5945;
+  --secondary-color: #fff;
+  --third-color: #555;
+  --four-color: #f3f3f3bc;
+  --fifth-color: #edeef0;
+}
+.dark-theme {
+  --bg-color: #15232d;
+  --secondary-color: #193549;
+  --third-color: #dfdfdf;
+  --four-color: #51a0d939;
+  --fifth-color: #a9c5d839;
+}
+body {
+  background-color: var(--bg-color) !important;
+}
+.container-fluid {
+  padding: 0 !important;
+}
+.container-fluid nav {
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.container-fluid nav div {
+  height: 8vh;
+  background: var(--secondary-color);
+  width: 100vw;
+}
+.container-fluid nav div a {
+  font-weight: 500;
+  background: -webkit-linear-gradient(#6e44c1, #9ec2e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 5rem;
+}
+.tracking-in-expand-fwd-top {
+  -webkit-animation: tracking-in-expand-fwd-top 0.8s
+    cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand-fwd-top 2.1s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+.container-fluid nav div img {
+  width: 4.5vh;
+}
+.container-fluid nav span {
+  padding-right: 2rem;
+}
+
+.container-fluid nav span img {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+.total {
+  background: var(--secondary-color);
+  height: 8vh;
+  width: 75%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto auto;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.total div {
+  background: #ff5945;
+  color: #fff;
+  margin: 0 1.5rem;
+  padding: 1rem 2rem;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+.todoContainer {
+  width: 78vw;
+  background: var(--secondary-color);
+  position: relative;
+  padding: 2rem 3rem;
+  border-radius: 30px;
+  min-height: 70vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.todoContainer .row1 .col {
+  position: relative;
+}
+.todoContainer .imgcon {
+  margin: 1rem;
+  cursor: pointer;
+}
+.todoContainer .imgcon img {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  padding: 0.5rem;
+  right: 100px;
+  border-radius: 50%;
+  top: 10px;
+}
+.todoContainer .imgcon img:hover {
+  background: #f78073;
+}
+.todoContainer .row1 .col input {
+  font-size: 100%;
+  padding: 0.8rem;
+  outline: none;
+  border: 2px solid #f96858de;
+  background-color: transparent;
+  border-radius: 35px;
+  width: 35vw;
+  color: #ff5945;
+}
+.todoContainer .row1 .col label {
+  transform: translateY(-50%) scale(0.8);
+  position: absolute;
+  left: 0;
+  font-size: 22px;
+  margin-left: 3.5rem;
+  color: #ff5945;
+  background: var(--secondary-color);
+  border-color: #f34936;
+}
+.todoContainer .row1 .col button {
+  padding: 0.8rem 3rem;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  outline: none;
+  color: white;
+  background: #ff5945;
+}
+.todoContainer .row1 .col button:hover {
+  border: 1px double white;
+}
+
+.todoContainer .row2 .col {
+  width: 55vw;
+  padding: 4rem 2rem;
+  padding-top: 2rem;
+}
+.todoContainer .row2 .col .headi {
+  color: #ff5945;
+  padding: 0;
+  padding-left: 4.4rem;
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.todoContainer .row2 .col ul li {
+  list-style: none;
+  font-size: 19px;
+  padding: 12px 8px 12px 50px;
+  color: var(--third-color);
+
+  position: relative;
+}
+.todoContainer .row2 .col ul li::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #cacace;
+  cursor: pointer;
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+}
+.todoContainer .row2 .col ul li.checked {
+  color: var(--third-color);
+  background: var(--four-color);
+  border-radius: 30px;
+  margin: 0.3rem;
+  text-decoration: line-through;
+}
+.todoContainer .row2 .col ul li.checked::before {
+  border: none;
+  background-image: url(/ToDoAssets/tick.png);
+}
+
+.todoContainer .row2 .col ul li span {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 28px;
+  color: var(--third-color);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.todoContainer .row2 .col ul li span:hover {
+  background: var(--fifth-color);
+}
+
+.todoContainer .row2 .col ul li.chekedLI {
+  color: var(--third-color);
+  background: var(--four-color);
+  border-radius: 30px;
+  margin: 0.3rem;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+@media only screen and (max-width: 765px) {
+  .container-fluid nav div a {
+    padding-left: 1.2rem;
+  }
+  .total {
+    background: var(--secondary-color);
+    height: 15vh;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto auto;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .total div {
+    background: #ff5945;
+    color: #fff;
+    margin: 0 0.4rem;
+    padding: 0rem 0.5rem;
+    height: fit-content;
+    line-height: 6vh;
+    border-radius: 20px;
+  }
+  .todoContainer {
+    width: 99vw;
+    margin-top: 3rem;
+  }
+  .todoContainer .imgcon img {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    padding: 0.5rem;
+    left: 50%;
+    border-radius: 50%;
+    top: 10px;
+  }
+  .todoContainer .row1 .col {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .todoContainer .row2 .col {
+    padding: 0;
+  }
+  .todoContainer .row1 .col input {
+    padding: 1.2rem 0.8rem;
+    width: 82vw;
+  }
+
+  .todoContainer .row1 .col label {
+    top: 0;
+  }
+  .todoContainer .row1 .col button {
+    padding: 0.8rem 6rem;
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+  .todoContainer .row2 .col {
+    width: 98vw;
+    overflow: hidden;
+  }
+  .todoContainer .row2 .col .headi {
+    font-size: 19px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .todoContainer .row2 .col ul {
+    padding: 0;
+    overflow: hidden;
+  }
+  .todoContainer .row2 .col ul li {
+    list-style: none;
+    font-size: 19px;
+    padding: 12px 8px 12px 50px;
+    color: var(--third-color);
+    position: relative;
+  }
+
+  .todoContainer .row2 .col ul li.checked::before {
+    border: none;
+    background-image: url(/ToDoAssets/tick.png);
+  }
+
+  .todoContainer .row2 .col ul li span {
+    position: absolute;
+    right: 10px;
+  }
+  .todoContainer .row2 .col ul li span:hover {
+    background: #edeef0;
+  }
+  .todoContainer .row2 .col ul li.checked {
+    margin-top: 0.8rem;
+  }
+}
